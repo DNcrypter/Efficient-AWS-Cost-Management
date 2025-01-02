@@ -139,7 +139,7 @@ There are many similar problems like this. For instance, we might attach an Elas
 ![img23](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img23.png)
 ![img24](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img24.png)
 ![img25](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img25.png)
-![img26](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img26.png)
+
 
 
 ##### 6. You have successfully created the scheduler, which will trigger the Lambda function every hour.
