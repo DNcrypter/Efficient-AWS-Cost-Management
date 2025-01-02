@@ -22,58 +22,58 @@ There are many similar problems like this. For instance, we might attach an Elas
 ##### 2. Navigate to the EC2 Console.
 ##### 3. In the Instances section, select ‘Instances,’ and then click on ‘Launch Instance’.
 
-![img1]()
+![img1](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img2.png)
 
 ##### 4. Next, navigate to the ‘Elastic Block Store’ section and select ‘Volumes’.
 
-![img2]()
+![img2](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img2.png)
 
 ##### 5. You will notice that a default volume has already been created for us.
 
 ##### 6. Next, click on ‘Snapshots,’ and then click the ‘Create Snapshot’ button. It will prompt you with a page that looks like this.
 
-![img3]()
+![img3](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img3.png)
 
 ##### 7. In Volume ID section choose your default Volume ID created when we create instance.
 
 ##### 8. Next, click ‘Next,’ provide a name for your Snapshot, and then scroll down and click ‘Create Snapshot’.
 
-![img4]()
+![img4](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img4.png)
 
 ### Step 2 :
 ##### 1. After creating a Snapshot, navigate to the Lambda Console..
 ##### 2. You will see some options in the user interface, such as ‘Create Function’.
 ##### 3. Click on ‘Functions’.
 
-![img5]()
+![img5](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img5.png)
 
 ##### 4. Select ‘Author from Scratch,’ then enter the Function name, and choose the latest Python version.
 ##### 5. Scroll down and click ‘Create Function’.
 ##### 6. After creating the function, scroll down, and you will see something like the image below..
 
-![img6]()
+![img6](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img6.png)
 
 ##### 7. Click on the ‘Code’ section.
 
 ##### 8. Next, clear the existing code and replace it with the ‘identify_stale_snapshots.py’ code.
 
 
-![img7]()
+![img7](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img7.png)
 
 ##### 9. Click ‘Deploy’ to save your changes, and then click ‘Test.’ It will prompt a page that looks like the one given below.
 
-![img8]()
+![img8](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img8.png)
 
 
 ##### 10. Please configure the settings as displayed above and then scroll down. Next, click on ‘Create Event’.
 
 ##### 11. Once you’ve created the event, proceed to the IAM Console(Identity and Access Management) and then navigate policies section to create a new policy.
 
-![img9]()
+![img9](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img9.png)
 
 ##### 12. Select the service as ‘EC2’
 
-![img10]()
+![img10](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img10.png)
 
 ##### 13. In the ‘Actions’ section, grant permissions for the following actions: DescribeInstances, DescribeVolumes, DescribeSnapshots, DeleteSnapshots.
 
@@ -81,21 +81,21 @@ There are many similar problems like this. For instance, we might attach an Elas
 
 ##### 15. Next, go to the page of the Lambda function you’ve created. In the “Permissions” section, click on the role name.
 
-![img11]()
+![img11](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img11.png)
 
 ##### 16. Click on ‘Add Permissions’ and then select ‘Attach Policy.’
 
-![img12]()
+![img12](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img12.png)
  
 ##### 17. Choose the correct policy you created.
 
-![img13]()
+![img13](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img13.png)
 
 ##### 18. Then scroll down and click ‘Add Permissions’.
 
 ##### 19. After that, you can go to the Lambda function page and run the code; it will display some outputs as shown below.
 
-![img14]()
+![img14](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img14.png)
 
 
 ### Step 3 :
@@ -104,7 +104,7 @@ There are many similar problems like this. For instance, we might attach an Elas
 ##### 3. Return to the Lambda console to test the code; go to the Lambda Function page.
 ##### 4. Under the Code section, click ‘Test code’, it will display an output like this.
 
-![img15]()
+![img15](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img15.png)
 
 ##### 5. As expected, our Lambda function deleted the snapshot because it was associated with a volume that couldn’t be found.
 
@@ -117,29 +117,29 @@ There are many similar problems like this. For instance, we might attach an Elas
 
 ##### 1. Navigate to CloudWatch Console.
 
-![img16]()
-![img17]()
-![img18]()
-![img19]()
+![img16](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img16.png)
+![img17](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img17.png)
+![img18](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img18.png)
+![img19](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img19.png)
 
 
 ##### 2. Next, on the following page, configure the schedule pattern as follows:
 
-![img20]()
+![img20](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img20.png)
 
 ##### 3. Scroll Down and then Click Next.
 
-![img21]()
-![img22]()
+![img21](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img21.png)
+![img22](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img22.png)
 
 ##### 4. Scroll Down and then Click Next.
 
 ##### 5. On the next page, choose ‘None’ for the ‘Action after Schedule’ option.
 
-![img22]()
-![img23]()
-![img24]()
-![img25]()
+![img23](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img23.png)
+![img24](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img24.png)
+![img25](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img25.png)
+![img26](https://github.com/DNcrypter/Efficient-AWS-Cost-Management/blob/main/images/img26.png)
 
 
 ##### 6. You have successfully created the scheduler, which will trigger the Lambda function every hour.
